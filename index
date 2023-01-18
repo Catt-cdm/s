@@ -1,1 +1,91 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <style>
+
+        .widget {
+            padding: 5px 5px ;
+            color: #303030;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+            font-family: Courier, monospace;
+
+        }
+
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, #808080 4px, transparent 4px) 0 0,
+                linear-gradient(to right, #808080  4px, transparent 4px) 0 100%,
+                linear-gradient(to left, #808080  4px, transparent 4px) 100% 0,
+                linear-gradient(to left, #808080  4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, #808080  4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, #808080  4px, transparent 4px) 100% 0,
+                linear-gradient(to top, #808080  4px, transparent 4px) 0 100%,
+                linear-gradient(to top, #808080  4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+<script type="text/javascript">
+
+Quotation=new Array()
+Quotation[0] = "Farewell, I've gone to take my throne above. But don't weep for me. 'Cause this will be the labor of my love (Warrior - Imagine Dragons)";
+Quotation[1] = "When you're standing on the edge. So young and hopeless. Got demons in your head (We Are - ONE OK ROCK)";
+Quotation[2] = "Never tell yourself. You should be someone else. Stand up tall and say. I'm not afraid, I'm not afraid (We Are - ONE OK ROCK)";
+Quotation[3] = "ソレを信じ、続けている姿. それこそ僕らが望むべき世界. と気付くことができたなら (Clock Strikes - ONE OK ROCK)";
+Quotation[4] = "That we could make forever after all. Finding the gold in our darkest moments. Watching the roads turning into white roses (Cinderblock Garden - All time low)";
+Quotation[5] = "Take all the ghosts and all those skeletons you hide. And bury them deep beneath the ground. Let them rest. 'Cause you weren't meant to bear that burden. Look at the roses in your garden. You can breathe now and forget (Cinderblock Garden - All time low) ";
+Quotation[6] = "I gotta say it's hard to be brave. When you're alone in the dark. I told myself that I wouldn't be scared But I'm still having nightmares (Nightmares - All time low)";
+Quotation[7] = "I won't turn back. I won't cross that hidden danger line. It's a loud and dark world. But I think I found the light (When they call my name - Black Veil Brides)";
+Quotation[8] = "Who we are is determined by the scars (Carry on - Falling in Reverse)";
+Quotation[9] = "Maybe it's not my weekend but it's gonna be my year. And I'm so sick of watching while the minutes pass as I go nowhere. And this is my reaction to everything I fear. 'Cause I've been going crazy, I don't wanna waste another minute here (Weigthless - All Time Low)";
+Quotation[10] = "Through the fire and the flames, we carry on (Through the fire and the flames - Dragon Force)";
+Quotation[11] = "あふれだす情熱を胸に どこまでも行くよ. まだ見ぬヒカリ 求め (Hikari e - Babystars)";
+Quotation[12] = "この心の背もたれにして. 何回も歌うよ 大事な思いを. 僕らだけの 主題歌にして (Bokuradakenoshudaika - Centimillimental)";
+Quotation[13] = "Find yourself a new gig. This town ain't big enough for two of us. I don't have the right name Or the right looks, But I have twice the heart (Just One Yestarday - Fall Out Boys)";
+Quotation[14] = "When you're at the end of the road. And you lost all sense of control. And your thoughts have taken their toll. When your mind breaks the spirit of your soul. Your faith walks on broken glass And the hangover doesn't pass.  Nothing's ever built to last (21 guns - Green day)" ;
+Quotation[15] = "'Cause you know it's what you're good at. The low road for the fast track, make every second last 'Cause you know it's what you're good at. The low road for the fast track, make every second last (Dear Maria, Count me in - All Time Low)";
+Quotation[16] = "Sometimes it's a battle, At times it's a war, But you're never defenseless. Sometimes we all lose strength. Please don't lose your faith (Madness - Sleeping With Sirens)";
+Quotation[17] = "After our time has passed, We're like light through stained glass, We go on and on and on, In the end we're never gone (Madness - Sleeping With Sirens)";
+Quotation[18] = "I will be yours to trust, this is not the last of us. We go on and on and on, In the end we're never gone or erased (Madness - Sleeping With Sirens)";
+  
+var Q = Quotation.length;
+  var whichQuotation=Math.round(Math.random()*(Q-1));
+  function showQuotation() {
+document.write(Quotation[whichQuotation]);}
+  
+     function displayQuotation(){
+       
+    document.getElementById('widget').innerHTML =Quotation [whichQuotation];
+     }
+    
+  
+  function displayWidget() {
+        displayQuotation();
+        setTimeout(displayWidget, Q);
+    }
+    displayWidget()
+  
+  </script>
+
+</body>
+</html>
